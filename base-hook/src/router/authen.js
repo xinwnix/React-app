@@ -1,18 +1,15 @@
 import React from "react";
-import {
-    BrowserRouter as Router,
-    Route,
-    Switch
-} from "react-router-dom";
-import * as pages from '../page'
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import * as pages from "../page";
+
 export default function Authen() {
-    return (
-        <div>
-            <Router>
-                <Switch>
-                    <Route index path="/" component={pages.StudentPage} />
-                </Switch>
-            </Router>
-        </div>
-    );
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<pages.StudentPage />} />
+        </Routes>
+      </Router>
+    </div>
+  );
 }
